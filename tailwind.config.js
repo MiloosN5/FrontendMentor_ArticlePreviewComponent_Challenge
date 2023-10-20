@@ -31,19 +31,19 @@ export default {
         'Manrope': ['Manrope']
       },
       fontSize: {
-        'h1': 'clamp(1rem, 0.6rem + 1.34vw, 1.25rem)', // [16px -> 20px]
+        'h2': 'clamp(1rem, 0.6rem + 1.34vw, 1.25rem)', // [16px -> 20px]
         'desc': '0.8125rem', // [13px]
         'info--default': '0.8125rem', // [13px]
         'info--popup': '0.875rem', // [14px]
       },
       letterSpacing: {
-        'h1': '0.012em', 
+        'h2': '0.012em', 
         'desc': '0.01em', 
         'info--default': '0.01em', 
         'info--popup': '0.3em' 
       },
       lineHeight: {
-        'h1': 'clamp(1.4375rem, 0.94rem + 1.67vw, 1.75rem)', // [23px -> 28px]
+        'h2': 'clamp(1.4375rem, 0.94rem + 1.67vw, 1.75rem)', // [23px -> 28px]
         'desc': '1.25rem', // [20px]
         'info--default': '1rem', // [16px]
       },
