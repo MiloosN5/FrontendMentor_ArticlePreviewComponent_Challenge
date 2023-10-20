@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* boilerplate */
+    svg, svg > path {
+        @apply cursor-pointer;
+    }
+
+    * {
+        @apply box-border m-0 p-0;
+    }
+
+.card {
+    @apply bg-white relative rounded-card drop-shadow-card /*d*/ d:w-card--d d:flex d:flex-row;
+
+    &__heroImage {
+        @apply bg-heroImg_URL bg-cover bg-center bg-no-repeat h-heroImg rounded-t-card /*s2*/ s2:bg-heroImg_POS--s2 /*d*/ d:bg-heroImg_POS--d d:w-heroImg--d d:h-heroImg--d d:rounded-tr-none d:rounded-s-card;
+    } 
+    
+    &__section { 
+        @apply flex flex-col px-section_X pt-section_T pb-section_B gap-section /*s1*/ s1:px-section_X--s1 s1:pt-section_T--s1  /*d*/ d:w-section--d d:px-section_X--d d:gap-section--d;
+    }
+    
+    &__headline { 
+        @apply text-myBlue-lv1 font-bold text-h1 leading-h1 tracking-h1;
+    } 
+    
+    &__desc  { 
+        @apply text-myBlue-lv2 font-medium text-desc tracking-desc leading-desc;
+    }
+
+    &__footer {
+        @apply relative;
+    }
+    
+    &__footerWrapper { 
+        @apply flex flex-col items-center justify-center text-center px-section_X py-footer_Y gap-footer /*s*/ s1:px-section_X--s1 /*s1*/ s2:flex-row s2:text-left /*d*/ d:py-0 d:px-section_X--d;
+    }
+    
+    &__avatar { 
+        @apply w-avatar rounded-full;
+    }
+    
+    &__infoName { 
+        @apply text-myBlue-lv1 not-italic font-bold text-info--default leading-info--default tracking-info--default;
+    }
+    
+    &__infoDate { 
+        @apply text-myBlue-lv3 text-desc tracking-desc;
+    }
+    
+    &__shareBtn { 
+        @apply flex flex-col justify-center w-full /*s2*/ s2:w-auto s2:ml-auto;
+    }
+    
+    &__shareBtn_wrapper { 
+        @apply  flex flex-col justify-center items-center mx-auto rounded-full w-shareWrapper h-shareWrapper z-50 cursor-pointer hover:bg-myBlue-hover ease-in-out duration-300;
+    }
+    
+    &__popup { 
+        @apply absolute flex flex-col justify-center items-center text-myBlue-lv3 bg-myBlue-lv1  pb-popup_B px-popup_X h-full bottom-0 left-0 right-0 gap-popup rounded-b-card ease-in-out duration-300 /*s2*/ s2:flex-row s2:justify-start s2:pb-0 s2:gap-popup--s2 /*d*/ d:h-popup--d d:left-auto d:right-popup_R--d d:bottom-popup_B--d d:px-popup_X--d d:rounded-card d:drop-shadow-popup;
+        &::after {
+            @apply /*d*/ d:content-empty d:w-arrow d:absolute d:border-solid d:border-arrow d:border-transparent d:border-t-myBlue-lv1 d:top-full d:left-popupArrow_L;  
+        }
+    }
+    
+    &__popupTitle { 
+        @apply text-info--popup tracking-info--popup cursor-pointer hover:text-myBlue-hover;
+    }
+    
+    &__socialIcons { 
+        @apply flex flex-row items-center gap-social;
+
+        svg > path {
+            @apply hover:fill-myBlue-hover border ease-in-out duration-300;
+        }
+    }  
+}
+
+
